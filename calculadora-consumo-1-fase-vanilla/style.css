@@ -1,0 +1,35 @@
+/* Esto es lo que Tailwind nos ahorrará después */
+html {
+    box-sizing: border-box;
+    background: #0000004d;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.input-field {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    height: 36px;
+    width: 142px;
+}
+
+#btn {
+    height: 36px;
+    padding: 0px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    border: 1px solid #8cf885;
+    scale: 1.02
+}
+
+
+

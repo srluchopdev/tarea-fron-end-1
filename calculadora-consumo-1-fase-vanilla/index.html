@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Pulse - Calculadora Futurista</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#050509',
+                        electricBlue: '#00f2fe',
+                        neonPurple: '#4facfe',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 15px rgba(0, 242, 254, 0.5)',
+                        'neon-card': '0 0 25px rgba(79, 172, 254, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darkBg text-gray-200 min-h-screen flex items-center justify-center p-4 font-sans antialiased">
+
+    <div class="w-full max-w-md bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-neon-card">
+        
+        <h1 class="text-3xl font-extrabold text-center mb-8 tracking-widest uppercase">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-neonPurple to-electricBlue">
+                Fuel Pulse
+            </span>
+        </h1>
+        
+        <p class="text-center text-gray-400 mb-8 text-sm">Cálculo de Consumo Inteligente</p>
+
+        <form id="calc-form" class="flex flex-col gap-6">
+            
+            <div class="relative">
+                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Kilómetros Iniciales</label>
+                <input type="number" id="km-inicio" placeholder="0.0" required
+                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+            </div>
+
+            <div class="relative">
+                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Kilómetros Finales</label>
+                <input type="number" id="km-fin" placeholder="0.0" required
+                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+            </div>
+
+            <div class="relative">
+                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Litros Cargados</label>
+                <input type="number" id="litros" placeholder="0.0" step="0.01" required
+                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+            </div>
+
+            <button type="submit" 
+                class="w-full mt-4 bg-gradient-to-r from-neonPurple to-electricBlue text-darkBg font-bold uppercase tracking-widest py-4 rounded-lg hover:from-electricBlue hover:to-neonPurple transform hover:scale-[1.02] transition duration-300 shadow-neon-blue active:scale-[0.98]">
+                Analizar Consumo
+            </button>
+        </form>
+
+        <div id="resultado" class="mt-8 text-center min-h-[50px] transition-all duration-500">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
