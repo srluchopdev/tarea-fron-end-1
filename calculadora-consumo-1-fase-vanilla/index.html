@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRuta - Bitácora de Viaje</title>
  
-    <!-- Tailwind CSS (misma forma que tenías) -->
+    <!--Tailwind CSS (misma forma que tenías)-->
     <script src="https://cdn.tailwindcss.com"></script>
  
-    <!-- Rediseño de la paleta: abandonamos el estilo futurista/oscuro -->
-    <!-- Nueva identidad: Eco-Friendly / Minimalista -->
+    <!--Rediseño de la paleta: abandonamos el estilo futurista/oscuro-->
+    <!--Nueva identidad: Eco-Friendly / Minimalista-->
     <script>
         tailwind.config = {
             theme: {
@@ -44,7 +44,7 @@
  
     <div class="w-full max-w-lg">
  
-        <!-- ── ENCABEZADO ── -->
+        <!--ENCABEZADO-->
         <header class="mb-8">
             <div class="flex items-center gap-2 mb-3">
                 <div class="w-7 h-7 rounded-full bg-ecoGreenLt flex items-center justify-center">
@@ -63,7 +63,7 @@
             <p class="text-sm text-ecoStone mt-2">Registrá cada carga del viaje y calculá el consumo total.</p>
         </header>
  
-        <!-- ══ SECCIÓN 1: FORMULARIO DE NUEVA CARGA ══ -->
+        <!--SECCIÓN 1: FORMULARIO DE NUEVA CARGA-->
         <div class="bg-ecoCard border border-ecoBorder rounded-2xl p-6 shadow-card mb-4">
  
             <p class="text-xs font-semibold tracking-widest uppercase text-ecoMuted mb-5">Nueva carga</p>
@@ -89,7 +89,7 @@
                 </div>
             </div>
  
-            <!-- Mensaje de error (oculto por defecto con clase "hidden" de Tailwind) -->
+            <!--Mensaje de error (oculto por defecto con clase "hidden" de Tailwind)-->
             <p id="error-msg" class="hidden text-xs text-red-700 bg-red-50 rounded-lg px-3 py-2 mb-4"></p>
  
             <button onclick="agregarCarga()"
@@ -98,8 +98,8 @@
             </button>
         </div>
  
-        <!-- ══ SECCIÓN 2: TABLA DE REGISTROS ══ -->
-        <!-- hidden = clase Tailwind para display:none. Se quita desde JS -->
+        <!--SECCIÓN 2: TABLA DE REGISTROS-->
+        <!--hidden = clase Tailwind para display:none. Se quita desde JS-->
         <div id="registros-section" class="hidden mb-4">
  
             <p class="text-xs font-semibold tracking-widest uppercase text-ecoMuted mb-3">Cargas registradas</p>
@@ -114,7 +114,7 @@
                             <th class="px-4 py-3"></th>
                         </tr>
                     </thead>
-                    <!-- tbody se llena dinámicamente desde script.js -->
+                    <!--tbody se llena dinámicamente desde script.js-->
                     <tbody id="tabla-body"></tbody>
                 </table>
             </div>
@@ -127,8 +127,8 @@
             </div>
         </div>
  
-        <!-- ══ SECCIÓN 3: PANEL DE RESULTADO ══ -->
-        <!-- Reemplaza al <div id="resultado"> original -->
+        <!--SECCIÓN 3: PANEL DE RESULTADO-->
+        <!--Reemplaza al <div id="resultado"> original-->
         <div id="resultado" class="hidden">
  
             <p class="text-xs font-semibold tracking-widest uppercase text-ecoMuted mb-3">Resumen del viaje</p>
