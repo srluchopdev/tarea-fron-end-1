@@ -1,35 +1,75 @@
-/* Esto es lo que Tailwind nos ahorrará después */
-html {
-    box-sizing: border-box;
-    background: #0000004d;
+/* Elimina flechas nativas en inputs numéricos (todos los browsers) */
+input[type=number] { -moz-appearance: textfield; }
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+ 
+/* ── Campo de texto estilizado ── */
+.input-eco {
+    background: #fafaf9;
+    border: 1.5px solid #e7e5e4;
+    border-radius: 10px;
+    padding: 11px 38px 11px 14px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    color: #1c1917;
+    outline: none;
+    transition: border-color 0.2s;
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.input-eco:focus {
+    border-color: #059669;
+    background: #fff;
 }
-.input-field {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    height: 36px;
-    width: 142px;
+.input-eco::placeholder { color: #a8a29e; }
+ 
+/* Unidad de medida flotante dentro del input */
+.input-hint {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #a8a29e;
+    pointer-events: none;
+    font-family: 'Nunito', sans-serif;
 }
-
-#btn {
-    height: 36px;
-    padding: 0px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+ 
+/* ── Filas de la tabla con animación de entrada ── */
+.row-enter {
+    animation: slideIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* Separador entre filas */
+#tabla-body tr {
+    border-top: 1px solid #e7e5e4;
+}
+ 
+/* Botón eliminar dentro de la tabla */
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #a8a29e;
     cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+    font-family: 'Nunito', sans-serif;
 }
-
-#btn:hover {
-    border: 1px solid #8cf885;
-    scale: 1.02
+.btn-delete:hover {
+    background: #fef2f2;
+    color: #991b1b;
 }
-
-
-
+ 
+/* ── Animación del panel de resultado ── */
+#resultado {
+    animation: revealUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes revealUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
